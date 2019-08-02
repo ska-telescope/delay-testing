@@ -1,0 +1,7 @@
+/.idea
+__pycache__
+*.pyc
+*.so
+*~
+/calc11/test_calc11
+/calc11/data/DE421_little_Endian
