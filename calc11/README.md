@@ -53,6 +53,3 @@ To run the test programs, do:
 ./test_calc11
 ./test_calc11.py
 ```
-
-We need a suitable test data set because both are producing NaNs with
-the current made-up inputs.
