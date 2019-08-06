@@ -18,9 +18,13 @@ subroutine wrapper_almacalc(refx, refy, refz, nant, antx, anty, antz, &
   real(c_double), dimension(ntimes, nant), intent(out) :: geodelay, &
       drydelay, wetdelay
 
+  logical, dimension(ntimes) :: ssobj_tmp
+
+  ssobj_tmp = ssobj
+
   call almacalc(refx, refy, refz, nant, antx, anty, antz, temp, &
-      pressure, humidity, ntimes, mjd, ra, dec, ssobj, dx, dy, dut, &
-      leapsec, axisoff, sourcename, jpx_de421, geodelay, drydelay, &
-      wetdelay)
+      pressure, humidity, ntimes, mjd, ra, dec, ssobj_tmp, dx, dy, &
+      dut, leapsec, axisoff, sourcename, jpx_de421, geodelay, &
+      drydelay, wetdelay)
 
 end subroutine wrapper_almacalc
